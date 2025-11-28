@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc63d975-b925-4995-bd31-272d436960eb" name="Changes" comment="Login testet med user i DB og redirecter til testpage, mangler junit test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/UserServiceTest.java" afterDir="false" />
+    <list default="true" id="cc63d975-b925-4995-bd31-272d436960eb" name="Changes" comment="Opsat Login således at der kan laves test på det">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/UserModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pages/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +22,6 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Class" />
       </list>
     </option>
   </component>
@@ -50,7 +52,6 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
-    "Maven.demo [test].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -98,18 +99,8 @@
       <option name="presentableId" value="Default" />
       <updated>1763990295559</updated>
       <workItem from="1764253584158" duration="336000" />
-      <workItem from="1764253938965" duration="3447000" />
-      <workItem from="1764314809358" duration="1959000" />
+      <workItem from="1764253938965" duration="2613000" />
     </task>
-    <task id="LOCAL-00001" summary="Login testet med user i DB og redirecter til testpage, mangler junit test">
-      <option name="closed" value="true" />
-      <created>1764261673102</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1764261673102</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,8 +122,7 @@
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
     <MESSAGE value="Opsat Login således at der kan laves test på det" />
-    <MESSAGE value="Login testet med user i DB og redirecter til testpage, mangler junit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login testet med user i DB og redirecter til testpage, mangler junit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Opsat Login således at der kan laves test på det" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
