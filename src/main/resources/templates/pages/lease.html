@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lease</title>
+
+<!--    Alert hvis submit failer-->
+    <title>Lease Result</title>
+    <script>
+        function showPopup(message) {
+            alert(message);
+        }
+    </script>
+
+</head>
+<body>
+<!--    Alert hvis submit failer-->
+<div th:if="${success}">
+    <script>
+        showPopup("Lease created successfully!");
+    </script>
+</div>
+<div th:if="${!success}">
+    <script>
+        showPopup("Lease creation failed!");
+    </script>
+</div>
+
+<!--Form til lease customer delen-->
+<form th:action="@{/submit}" th:object="${customer}" method="post">
+
+    <label for="firstName">First Name:</label>
+    <input type="text" th:field="*{firstName}" id="firstName"/><br/>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" th:field="*{lastName}" id="lastName"/><br/>
+
+    <label for="email">Email:</label>
+    <input type="email" th:field="*{email}" id="email"/><br/>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" th:field="*{phone}" id="phone"/><br/>
+
+    <label for="dOB">Date of Birth:</label>
+    <input type="date" th:field="*{dOB}" id="dOB"/><br/>
+
+    <label for="driverLicenseNumber">Driver License Number:</label>
+    <input type="text" th:field="*{driverLicenseNumber}" id="driverLicenseNumber"/><br/>
+
+    <label for="street">Street:</label>
+    <input type="text" th:field="*{street}" id="street"/><br/>
+
+    <label for="houseNumber">House Number:</label>
+    <input type="text" th:field="*{houseNumber}" id="houseNumber"/><br/>
+
+    <label for="postalCode">Postal Code:</label>
+    <input type="text" th:field="*{postalCode}" id="postalCode"/><br/>
+
+    <label for="city">City:</label>
+    <input type="text" th:field="*{city}" id="city"/><br/>
+
+    <label for="country">Country:</label>
+    <input type="text" th:field="*{country}" id="country"/><br/>
+
+<!--  form delen til lease hvor bilen indtastes-->
+
+    <form th:action="@{/lease}" th:object="${lease}" method="post">
+
+        <label for="startDate">Start Date:</label>
+        <input type="date" th:field="*{startDate}" id="startDate"/><br/>
+
+        <label for="endDate">End Date:</label>
+        <input type="date" th:field="*{endDate}" id="endDate"/><br/>
+
+        <label for="totalPrice">Total Price:</label>
+        <input type="number" step="0.01" th:field="*{totalPrice}" id="totalPrice"/><br/>
+
+        <label for="kmStart">KM Start:</label>
+        <input type="number" th:field="*{kmStart}" id="kmStart"/><br/>
+
+        <label for="vinId">Registration Number:</label>
+        <input type="text" th:field="*{vinId}" id="vinId"/><br/>
+
+        <button type="submit">Create Lease</button>
+    </form>
+
+    <button type="submit">Submit</button>
+
+
+</form>
+
+</body>
+</html>
