@@ -22,17 +22,35 @@ public class LeaseModel {
     @JoinColumn(name = "customer_id")
     private CustomerModel customer;
 
-    public void setCustomer(CustomerModel customer) {
-        this.customer = customer;
-    }
 
-    private String vinId;
+    @ManyToOne
+    @JoinColumn(name = "vinId", referencedColumnName = "vinID")
+    private Vehicle vehicle;
+
+
     private int kmStart;
 
     public LeaseModel() {
 
     }
 
+
+    public void setVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
+    }
+
+    public CustomerModel getCustomer() {
+        return customer;
+    }
+
+    public Vehicle getVehicle() {
+        return vehicle;
+    }
+
+
+    public void setCustomer(CustomerModel customer) {
+        this.customer = customer;
+    }
 
     public void setId(long id) {
         this.id = id;
@@ -48,10 +66,6 @@ public class LeaseModel {
 
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
-    }
-
-    public void setVinId(String vinId) {
-        this.vinId = vinId;
     }
 
 
@@ -77,9 +91,7 @@ public class LeaseModel {
     }
 
 
-    public String getVinId() {
-        return vinId;
-    }
+
 
     public int getKmStart() {
         return kmStart;

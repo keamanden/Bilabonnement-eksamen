@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 //Siden customer gemmes via oprettelsen af et lease er customercontroller ikke brugt.
 //Opfylder ikke SOLID men jf. kravspecifikationer giver seperat customer oprettelse ikke mening.
+// Classen beholdes af symbolske årsager og hvis man ønskede at splitte oprettelsen senere kan
+//Customer placeres her
 
 public class CustomerController {
-
-
 
 
 }

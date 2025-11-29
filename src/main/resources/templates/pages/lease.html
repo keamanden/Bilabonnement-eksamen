@@ -14,12 +14,24 @@
 
 </head>
 <body>
-<!--    Alert hvis submit failer-->
+<!--    Alerts-->
 <div th:if="${success == true}">
     <script>alert('Lease created successfully!');</script>
 </div>
 <div th:if="${success == false}">
     <script>alert('Lease creation failed!');</script>
+</div>
+
+<!--JS alert til at display errormessage, eneste løsning efter 2 timer debugging-->
+<div th:if="${errorMessage}">
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        const err = /*[[${#strings.escapeJavaScript(errorMessage)}]]*/ "";
+        if (err && err.length > 0) {
+            alert(err);
+        }
+        /*]]>*/
+    </script>
 </div>
 
 <!--Form til lease customer delen-->
