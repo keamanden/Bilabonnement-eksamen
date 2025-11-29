@@ -24,7 +24,7 @@ public class LeaseModel {
 
 
     @ManyToOne
-    @JoinColumn(name = "vinId", referencedColumnName = "vinID")
+    @JoinColumn(name = "vei_id", referencedColumnName = "vei_id")
     private Vehicle vehicle;
 
 

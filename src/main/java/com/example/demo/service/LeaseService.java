@@ -16,13 +16,13 @@ public class LeaseService {
     private final LeaseRepository leaseRepository;
     private final VehicleService vehicleService;
 
-    public LeaseService(CustomerRepository customerRepository, LeaseRepository leaseRepository, LeaseService leaseService, VehicleService vehicleService) {
+    public LeaseService(CustomerRepository customerRepository, LeaseRepository leaseRepository, VehicleService vehicleService) {
         this.customerRepository = customerRepository;
         this.leaseRepository = leaseRepository;
         this.vehicleService = vehicleService;
     }
 
-    public LeaseModel createLease(LeaseRequest leaseRequest) {
+    public void createLease(LeaseRequest leaseRequest) {
 
         CustomerModel customer = customerRepository.save(leaseRequest.getCustomer());
 
@@ -36,7 +36,7 @@ public class LeaseService {
         lease.setCustomer(customer);
         lease.setVehicle(leaseRequest.getVehicle());
 
-        return leaseRepository.save(lease);
+        leaseRepository.save(lease);
     }
 
 }

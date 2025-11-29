@@ -15,19 +15,10 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/lease")
 public class LeaseController {
 
-
-    private final LeaseRepository leaseRepository;
-    private final CustomerRepository customerRepository;
-    private final VehicleRepository vehicleRepository;
-    private final VehicleService vehicleService;
     private final LeaseService leaseService;
 
+    public LeaseController(LeaseService leaseService) {
 
-    public LeaseController(LeaseRepository leaseRepository, CustomerRepository customerRepository, VehicleRepository vehicleRepository, VehicleService vehicleService, LeaseService leaseService) {
-        this.leaseRepository = leaseRepository;
-        this.customerRepository = customerRepository;
-        this.vehicleRepository = vehicleRepository;
-        this.vehicleService = vehicleService;
         this.leaseService = leaseService;
     }
 
@@ -46,15 +37,18 @@ public class LeaseController {
 
         try {
             leaseService.createLease(leaseRequest);
-            model.addAttribute("Success", true);
+            model.addAttribute("success", true);
+            model.addAttribute("leaseRequest", new LeaseRequest());
         }catch (IllegalArgumentException e){
             model.addAttribute("errorMessage", e.getMessage());
-            model.addAttribute("Success", false);
+            model.addAttribute("success", false);
+            //Hvis der indtastet forkert reg nr. slettes alt data i formen ikke
+            model.addAttribute("leaseRequest", leaseRequest);
         } catch (Exception e) {
-            model.addAttribute("Success", false);
-            model.addAttribute("Error", "unexpected error");
+            model.addAttribute("success", false);
+            model.addAttribute("error", "unexpected error");
         }
-        model.addAttribute("leaseRequest", new LeaseRequest());
+
         return "pages/lease";
     }
 

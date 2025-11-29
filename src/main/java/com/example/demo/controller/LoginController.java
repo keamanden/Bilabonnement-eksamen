@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class LoginController {
 
+    public LoginController(UserService userService) {
+        this.userService = userService;
+    }
+
     @GetMapping("/login")
     public String login() {
         return "pages/login";
@@ -18,8 +22,8 @@ public class LoginController {
         return "pages/testPage";
     }
 
-    @Autowired
-    private UserService userService;
+
+    private final UserService userService;
 
     @PostMapping("/login")
     public String login(@RequestParam String username,
