@@ -12,23 +12,21 @@ public class LeaseModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private CustomerModel customer;
+
+    @ManyToOne
+    @JoinColumn(name = "vei_id")
+    private Vehicle vehicle;
 
 
     private LocalDate startDate;
     private LocalDate endDate;
     private double totalPrice;
-
-    @ManyToOne
-    @JoinColumn(name = "customer_id")
-    private CustomerModel customer;
-
-
-    @ManyToOne
-    @JoinColumn(name = "vei_id", referencedColumnName = "vei_id")
-    private Vehicle vehicle;
-
-
     private int kmStart;
+
+
 
     public LeaseModel() {
 
@@ -68,8 +66,6 @@ public class LeaseModel {
         this.totalPrice = totalPrice;
     }
 
-
-
     public void setKmStart(int kmStart) {
         this.kmStart = kmStart;
     }
@@ -90,14 +86,8 @@ public class LeaseModel {
         return endDate;
     }
 
-
-
-
     public int getKmStart() {
         return kmStart;
     }
-
-
-
 
 }

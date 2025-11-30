@@ -4,8 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
-import java.sql.Date;
 import java.time.LocalDate;
 
 @Entity
@@ -23,6 +21,13 @@ public class CustomerModel {
     private String phone;
     private LocalDate dOB;
     private String driverLicenseNumber;
+    private String street;
+    private String houseNumber;
+    private String postalCode;
+    private String city;
+    private String country;
+
+
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -111,13 +116,6 @@ public class CustomerModel {
     public String getCountry() {
         return country;
     }
-
-    private String street;
-    private String houseNumber;
-    private String postalCode;
-    private String city;
-    private String country;
-
 
 
     public void setId(Long id) {
