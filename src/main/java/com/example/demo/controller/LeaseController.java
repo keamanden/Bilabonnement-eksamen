@@ -51,6 +51,7 @@ public class LeaseController {
     public String createLeaseAndAddToDB(@ModelAttribute LeaseRequest leaseRequest, Model model) {
 
         try {
+
             leaseService.createAndSaveLeaseJDBC(leaseRequest);
 
         }catch (IllegalArgumentException e){
@@ -58,10 +59,14 @@ public class LeaseController {
             model.addAttribute("success", false);
             //Hvis der indtastet forkert reg nr. slettes alt data i formen ikke
             model.addAttribute("leaseRequest", leaseRequest);
+            e.printStackTrace();
         } catch (Exception e) {
             model.addAttribute("success", false);
             model.addAttribute("errorMessage", "unexpected error");
+            e.printStackTrace();
         }
+
+        model.addAttribute("leaseRequest", leaseRequest);
         return "pages/lease";
     }
 

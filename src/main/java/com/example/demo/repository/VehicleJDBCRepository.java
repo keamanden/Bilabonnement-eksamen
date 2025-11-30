@@ -12,7 +12,6 @@ public class VehicleJDBCRepository {
     public Long findVehicleIdByRegistration(String registrationNo) {
         String sql = "SELECT vei_id FROM vehicle WHERE registration_no = ?";
 
-        DataSource dataSource;
         try (Connection conn = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/test_bilabonnement", "root", "keamanden"
         );

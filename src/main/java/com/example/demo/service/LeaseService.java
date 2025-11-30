@@ -50,8 +50,11 @@ public class LeaseService {
 
         Long vehicleId = vehicleJDBCRepository.findVehicleIdByRegistration(leaseRequest.getVehicle().getRegistrationNo());
 
-        leaseJDBCRepository.saveLeaseJDBC(leaseRequest, customerId, vehicleId);
-
+        try {
+            leaseJDBCRepository.saveLeaseJDBC(leaseRequest, customerId, vehicleId);
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }

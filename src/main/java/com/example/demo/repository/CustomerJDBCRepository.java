@@ -7,10 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import java.time.LocalDate;
 
 @Repository
@@ -18,12 +15,12 @@ public class CustomerJDBCRepository {
 
 
     public Long saveCustomerAndReturnPK(LeaseRequest leaseRequest) {
-        String sqlCostumer = "INSERT INTO customer_model (dob, city, country, driver_license_number, email, first_name, house_number, last_name, phone, postal_code, street) VALUES ( ?, ?, ?,?,?,?,?,?,?,?,?)";
+        String sqlCustomer = "INSERT INTO customer_model (dob, city, country, driver_license_number, email, first_name, house_number, last_name, phone, postal_code, street) VALUES ( ?, ?, ?,?,?,?,?,?,?,?,?)";
 
 
         try (Connection conn = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/test_bilabonnement", "root", "keamanden");
-             PreparedStatement ps = conn.prepareStatement(sqlCostumer)) {
+             PreparedStatement ps = conn.prepareStatement(sqlCustomer, Statement.RETURN_GENERATED_KEYS)) {
 
 
             ps.setDate(1, java.sql.Date.valueOf(leaseRequest.getCustomer().getdOB()));
@@ -40,11 +37,17 @@ public class CustomerJDBCRepository {
 
             ps.executeUpdate();
 
+            try (ResultSet rs = ps.getGeneratedKeys()) {
+                if (rs.next()) {
+                    return rs.getLong(1);
+                }
+            }
+
         } catch (SQLException e) {
             throw new RuntimeException("Error saving lease", e);
         }
 
-        return leaseRequest.getCustomer().getId();
+        throw new RuntimeException("no key generated");
     }
 
     

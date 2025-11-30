@@ -19,7 +19,7 @@ public class LeaseJDBCRepository {
 
     public void saveLeaseJDBC(LeaseRequest leaseRequest, Long customerId, Long vinID) {
 
-        String sqlLease = "INSERT INTO lease_model (end_date, km_start, start_date, total_price, customer_id, vin_id) VALUES (?,?,?,?,?,?)";
+        String sqlLease = "INSERT INTO lease_model (end_date, km_start, start_date, total_price, customer_id, vei_id) VALUES (?,?,?,?,?,?)";
 
         try (Connection conn = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/test_bilabonnement", "root", "keamanden");
