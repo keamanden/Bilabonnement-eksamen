@@ -12,6 +12,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.ResultSet;
 import java.time.LocalDate;
 
 @Repository
@@ -40,7 +41,20 @@ public class LeaseJDBCRepository {
         }
     }
 
-
+    public double getTotalLeasePrice() {
+        String sql = "SELECT COALESCE(SUM(total_price), 0) FROM lease_model";
+        try (Connection conn = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/test_bilabonnement", "root", "keamanden");
+             PreparedStatement ps = conn.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery()) {
+            if (rs.next()) {
+                return rs.getDouble(1);
+            }
+            return 0.0;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error fetching total lease price", e);
+        }
+    }
 
 
     public LeaseJDBCRepository() throws SQLException {

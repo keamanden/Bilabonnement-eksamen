@@ -34,6 +34,8 @@
     </script>
 </div>
 
+<h2>Total pris af udlejninger: <span th:text="${totalLeasePrice}">0</span></h2>
+
 <!--Form til lease customer delen-->
 <form th:action="@{/lease}" th:object="${leaseRequest}" method="post">
 

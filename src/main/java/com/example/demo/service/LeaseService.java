@@ -56,5 +56,9 @@ public class LeaseService {
             e.printStackTrace();
         }
     }
+    public double getTotalLeasePrice() {
+        return leaseJDBCRepository.getTotalLeasePrice();
+    }
+
 
 }

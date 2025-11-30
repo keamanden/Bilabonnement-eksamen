@@ -7,8 +7,10 @@
     <list default="true" id="cc63d975-b925-4995-bd31-272d436960eb" name="Changes" comment="Tilføjet sql mappe under ressources til vores sql scripts (masterscript + individuelle tables)">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/damagereport.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/damagereport.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/vehicle.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/vehicle.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LeaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LeaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/LeaseJDBCRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/LeaseJDBCRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/service/LeaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/service/LeaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pages/lease.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pages/lease.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +27,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -53,6 +54,7 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="35vUyQQA7v1Gr82dAkcpxmNxsqg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
