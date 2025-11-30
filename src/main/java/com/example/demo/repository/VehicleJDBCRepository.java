@@ -1,8 +1,11 @@
 package com.example.demo.repository;
 
+import org.springframework.stereotype.Repository;
+
 import javax.sql.DataSource;
 import java.sql.*;
 
+@Repository
 public class VehicleJDBCRepository {
 
 
