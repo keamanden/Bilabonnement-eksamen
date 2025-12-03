@@ -6,17 +6,21 @@
 </head>
 <body>
 
-<header th:fragment="header">
+<header class ="header" th:fragment="header">
+   <div>
+    <img class="logo" th:src="@{/images/logo.png}" alt="MySite Logo">
+   </div>
   <nav class="nav-bar">
-    <a href="/" class="logo">firma logo</a>
-        <img th:src="@{/images/logo.png}" alt="MySite Logo">
       <ul class="nav-links">
-        <li><a th:href="@{/lease}">opret lease</a></li>
-        <li><a th:href="@{/damagereport}">Skade registreringz</a></li>
+        <li><a th:href="@{/lease}">Opret lease</a></li>
+        <li><a th:href="@{/damagereport}">Skade registrering</a></li>
         <li><a th:href="@{/currentleasingcontracts}">Nuværende udlejninger</a></li>
       </ul>
-
   </nav>
+
+    <div class="logout">
+        <a th:href="@{/login}">Logout</a>
+    </div>
 </header>
 
 
