@@ -3,23 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" th:href="@{/css/login_style.css}">
 </head>
 <body>
 
-<!--login box-->
-<div>
+<div class="login">
 
-  <form th:action="@{/login}" method="post">
-    <label>Username:</label>
-    <input type="text" name="username" required />
-    <br/>
-    <label>Password:</label>
-    <input type="password" name="password" required />
-    <br/>
-    <button type="submit">Login</button>
+    <div class="logo-container">
+        <img class="logo" th:src="@{/images/logo.png}" alt="MySite Logo">
+    </div>
+
+
+    <!--login box-->
+    <div class="login-box">
+        <p class="login-title">Login</p>
+        <form th:action="@{/login}" method="post">
+            <label>Username:</label>
+            <label>
+                <input type="text" name="username" required/>
+            </label>
+            <br/>
+            <label>Password:</label>
+            <label>
+                <input type="password" name="password" required/>
+            </label>
+            <br/>
+            <button type="submit">Login</button>
+        </form>
+
+    </div>
 
 </div>
-
 
 
 </body>
