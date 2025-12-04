@@ -2,62 +2,66 @@
 <html lang="da" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nuværende udlejninger</title>
+  <link th:href="@{/css/header_style.css}" rel="stylesheet">
+  <link th:href="@{/css/currentleasingcontracts_style.css}" rel="stylesheet">
 </head>
 <body>
 
-<header>
-  <nav>
-    <a th:href="@{/lease}">Opret Lejekontrakt</a>
-    <a th:href="@{/lease/current}">Se nuværende udlejninger</a>
-    <a th:href="@{/login}">Log ud</a>
-  </nav>
-</header>
+  <div th:replace="~{Globals/header :: header}"></div>
 
-<h1>Nuværende udlejninger</h1>
+  <main class="main-content">
+    <h1 class="page-title">Nuværende udlejninger</h1>
 
-<section>
-  <table border="1" cellpadding="6" cellspacing="0">
-    <thead>
-    <tr>
-      <th>Reg. nr.</th>
-      <th>Mærke</th>
-      <th>Model</th>
-      <th>Kunde</th>
-      <th>Tlf.</th>
-      <th>Startdato</th>
-      <th>Slutdato</th>
-      <th>Pris</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="lease : ${currentLeases}">
-      <td th:text="${lease.vehicle.registrationNo}">AB12345</td>
-      <td th:text="${lease.vehicle.brand}">Brand</td>
-      <td th:text="${lease.vehicle.model}">Model</td>
-      <td th:text="${lease.customer.firstName + ' ' + lease.customer.lastName}">Fornavn Efternavn</td>
-      <td th:text="${lease.customer.phone}">00000000</td>
-      <td th:text="${lease.startDate}">2025-01-01</td>
-      <td th:text="${lease.endDate}">2025-12-31</td>
-      <td th:text="${lease.totalPrice}">0.00</td>
-    </tr>
-    <tr th:if="${#lists.isEmpty(currentLeases)}">
-      <td colspan="8">Ingen aktive udlejninger</td>
-    </tr>
-    </tbody>
-  </table>
-</section>
+    <section class="leases-section">
+      <div class="table-container">
+        <table class="leases-table">
+          <thead>
+            <tr>
+              <th>Reg. nr.</th>
+              <th>Mærke</th>
+              <th>Model</th>
+              <th>Kunde</th>
+              <th>Tlf.</th>
+              <th>Startdato</th>
+              <th>Slutdato</th>
+              <th>Pris</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr th:each="lease : ${currentLeases}">
+              <td th:text="${lease.vehicle.registrationNo}">AB12345</td>
+              <td th:text="${lease.vehicle.brand}">Brand</td>
+              <td th:text="${lease.vehicle.model}">Model</td>
+              <td th:text="${lease.customer.firstName + ' ' + lease.customer.lastName}">Fornavn Efternavn</td>
+              <td th:text="${lease.customer.phone}">00000000</td>
+              <td th:text="${#temporals.format(lease.startDate, 'dd-MM-yyyy')}">2025-01-01</td>
+              <td th:text="${#temporals.format(lease.endDate, 'dd-MM-yyyy')}">2025-12-31</td>
+              <td class="price-cell" th:text="${#numbers.formatDecimal(lease.totalPrice, 0, 'POINT', 2, 'POINT') + ' kr.'}">0.00 kr.</td>
+            </tr>
+            <tr th:if="${#lists.isEmpty(currentLeases)}" class="empty-row">
+              <td colspan="8" class="empty-message">Ingen aktive udlejninger</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-<aside>
-  <p>
-    <strong>Total pris for alle nuværende udlejninger:</strong>
-    <span th:text="${currentLeasesTotalPrice}">0.00</span>
-  </p>
-  <p>
-    <strong>Totale antal af udlejede køretøjer:</strong>
-    <span th:text="${currentLeasesCount}">0</span>
-  </p>
-</aside>
+    <aside class="statistics-section">
+      <div class="statistics-card">
+        <h2>Statistik</h2>
+        <div class="stat-item">
+          <span class="stat-label">Total pris for alle nuværende udlejninger:</span>
+          <span class="stat-value" th:text="${#numbers.formatDecimal(currentLeasesTotalPrice, 0, 'POINT', 2, 'POINT') + ' kr.'}">0.00 kr.</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Totale antal af udlejede køretøjer:</span>
+          <span class="stat-value" th:text="${currentLeasesCount}">0</span>
+        </div>
+      </div>
+    </aside>
+  </main>
 
 </body>
 </html>

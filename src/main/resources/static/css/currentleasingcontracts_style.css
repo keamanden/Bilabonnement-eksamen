@@ -1,0 +1,177 @@
+/* 
+ * Current Leasing Contracts Page Styles
+ * Styles for displaying active lease contracts in a table format
+ */
+
+/* Main content container */
+.main-content {
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Page title styling */
+.page-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Section containing the leases table */
+.leases-section {
+  margin-bottom: 40px;
+}
+
+/* Container for the table with horizontal scroll on smaller screens */
+.table-container {
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: white;
+}
+
+/* Main leases table styling */
+.leases-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+/* Table header styling */
+.leases-table thead {
+  background-color: #f5f5f5;
+  border-bottom: 2px solid #ddd;
+}
+
+.leases-table th {
+  padding: 15px 12px;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Table body styling */
+.leases-table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s ease;
+}
+
+.leases-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.leases-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Table cell styling */
+.leases-table td {
+  padding: 12px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Price cell styling - right aligned and emphasized */
+.price-cell {
+  text-align: right;
+  font-weight: 600;
+  color: #2c5aa0;
+}
+
+/* Empty row styling */
+.empty-row {
+  background-color: #fafafa;
+}
+
+.empty-message {
+  text-align: center;
+  padding: 40px !important;
+  color: #999;
+  font-style: italic;
+  font-size: 16px;
+}
+
+/* Statistics section styling */
+.statistics-section {
+  margin-top: 40px;
+}
+
+.statistics-card {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.statistics-card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 20px;
+  border-bottom: 2px solid #2c5aa0;
+  padding-bottom: 10px;
+}
+
+/* Individual statistic item */
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.stat-item:last-child {
+  border-bottom: none;
+}
+
+.stat-label {
+  font-weight: 500;
+  color: #555;
+  font-size: 15px;
+}
+
+.stat-value {
+  font-weight: bold;
+  color: #2c5aa0;
+  font-size: 18px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 15px;
+  }
+
+  .page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .leases-table th,
+  .leases-table td {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+
+  .statistics-card {
+    padding: 15px;
+  }
+
+  .stat-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .stat-value {
+    font-size: 16px;
+  }
+}
+
