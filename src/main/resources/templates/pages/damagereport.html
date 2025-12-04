@@ -56,20 +56,20 @@
                 <form id="damage-form" th:action="@{/damage/save}" th:object="${damageReport}" method="post" class="damage-form">
                     <!-- VIN number input field - Vehicle Identification Number -->
                     <div class="form-group">
-                        <label for="vin_id">Stelnummer</label>
-                        <input type="text" th:field="*{vin_id}" id="vin_id" required>
+                        <label for="vinId">Stelnummer</label>
+                        <input type="text" th:field="*{vinId}" id="vinId" required>
                     </div>
 
                     <!-- Employee ID input field - identifies which employee is registering the damage -->
                     <div class="form-group">
-                        <label for="employee_id">Medarbejder nr.</label>
-                        <input type="number" th:field="*{employee_id}" id="employee_id" required>
+                        <label for="employeeId">Medarbejder nr.</label>
+                        <input type="number" th:field="*{employeeId}" id="employeeId" required>
                     </div>
 
                     <!-- Date picker for when the damage was discovered -->
                     <div class="form-group">
-                        <label for="damage_date">Dato for skadens udfindelse</label>
-                        <input type="date" th:field="*{damage_date}" id="damage_date" required>
+                        <label for="damageDate">Dato for skadens udfindelse</label>
+                        <input type="date" th:field="*{damageDate}" id="damageDate" required>
                     </div>
 
                     <!-- Textarea for detailed description of the damage -->
@@ -80,11 +80,11 @@
                     
                     <!-- Hidden fields for backend processing - not visible to user -->
                     <!-- Lease ID: Links damage report to a specific lease contract -->
-                    <input type="hidden" th:field="*{lease_id}" id="lease_id" value="1">
+                    <input type="hidden" th:field="*{leaseId}" id="leaseId" value="1">
                     <!-- End mileage: Final kilometers when damage was reported -->
-                    <input type="hidden" th:field="*{km_slut}" id="km_slut" value="0">
+                    <input type="hidden" th:field="*{kmSlut}" id="kmSlut" value="0">
                     <!-- Repair cost: Automatically calculated from damage list, updated via JavaScript -->
-                    <input type="hidden" th:field="*{repair_cost}" id="repair_cost">
+                    <input type="hidden" th:field="*{repairCost}" id="repair_cost">
                 </form>
             </div>
 
