@@ -8,7 +8,10 @@ import com.example.demo.repository.VehicleRepository;
 import com.example.demo.service.LeaseService;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 // Controller class handles web requests and returns view names rendered by thymeleaf
@@ -28,19 +31,25 @@ public class LeaseController {
         this.vehicleRepository = vehicleRepository;
     }
 
-    // method that shows the createContract page and handlet GET reguests
+    // Redirect from /lease to /leaseContract for navigation compatibility
+    @GetMapping("/lease")
+    public String redirectToLeaseContract() {
+        return "redirect:/leaseContract";
+    }
+
+    // Method that shows the createContract page and handles GET requests
     @GetMapping("/leaseContract")
     public String showCreateLeaseForm(
-            // query paramters to pass data to thymeleaf template
+            // Query parameters to pass data to thymeleaf template
             @RequestParam(value = "customerId", required = false) Long customerId,
             @RequestParam(value = "vinId", required = false) String vinId,
             Model model) {
 
-        // Loads all customers and vehicle sorted for dropdown menu
+        // Loads all customers and vehicles sorted for dropdown menu
         var customers = customerRepository.findAll(Sort.by("firstName"));
-        var vehicles  = vehicleRepository.findAll(Sort.by("registrationNo"));
+        var vehicles = vehicleRepository.findAll(Sort.by("registrationNo"));
 
-        // This makes the leaseform data as a object for the thymeleaf form
+        // This makes the leaseform data as an object for the thymeleaf form
         LeaseModel leaseForm = new LeaseModel();
         if (customerId != null) leaseForm.setCustomerId(customerId);
         if (vinId != null) leaseForm.setVinId(vinId);
@@ -84,18 +93,6 @@ public class LeaseController {
 
         // Redirects back to the same page
         return "pages/leaseContractSuccess";
-    }
-
-
-
-    // Used to show current leases
-    @GetMapping("/current")
-    public String showCurrentLeases(Model model) {
-        var currentLeases = leaseService.getCurrentLeases();
-        model.addAttribute("currentLeases", currentLeases);
-        model.addAttribute("currentLeasesTotalPrice", leaseService.getCurrentLeasesTotalPrice());
-        model.addAttribute("currentLeasesCount", currentLeases.size());
-        return "pages/currentleasingcontracts";
     }
 
 
