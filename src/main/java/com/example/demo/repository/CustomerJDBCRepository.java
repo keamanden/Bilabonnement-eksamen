@@ -1,10 +1,4 @@
 package com.example.demo.repository;
-
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
-
 /*
 import com.example.demo.model.CustomerModel;
 import org.springframework.beans.factory.annotation.Autowired;

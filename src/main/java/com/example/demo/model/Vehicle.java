@@ -2,10 +2,6 @@ package com.example.demo.model;
 
 import jakarta.persistence.*;
 
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
 
 @Entity
 @Table(name = "vehicle")

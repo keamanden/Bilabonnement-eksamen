@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-
 import com.example.demo.model.CustomerModel;
 import com.example.demo.repository.CustomerRepository;
 import org.springframework.stereotype.Controller;

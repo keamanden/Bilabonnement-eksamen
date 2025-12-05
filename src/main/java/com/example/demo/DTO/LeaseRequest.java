@@ -1,29 +1,25 @@
 package com.example.demo.DTO;
 /*
 import com.example.demo.model.CustomerModel;
-import com.example.demo.model.LeaseModel;
+import com.example.demo.model.LeaseContractModel;
 import com.example.demo.model.Vehicle;
 
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
 
 public class LeaseRequest {
 
     private CustomerModel customer;
-    private LeaseModel lease;
+    private LeaseContractModel lease;
     private Vehicle vehicle;
 
     public void setCustomer(CustomerModel customer) {
         this.customer = customer;
     }
 
-    public void setLease(LeaseModel lease) {
+    public void setLease(LeaseContractModel lease) {
         this.lease = lease;
     }
 
-    public LeaseModel getLease() {
+    public LeaseContractModel getLease() {
         return lease;
     }
 

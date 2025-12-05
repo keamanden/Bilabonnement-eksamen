@@ -1,14 +1,8 @@
 package com.example.demo.model;
 
 import jakarta.persistence.*;
-
 import java.time.LocalDate;
 
-
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
 
 @Entity
 @Table(name = "customer")
@@ -46,6 +40,7 @@ public class CustomerModel {
 
 
 
+    // Setters
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -90,6 +85,7 @@ public class CustomerModel {
         this.country = country;
     }
 
+    // Getters
     public String getFirstName() {
         return firstName;
     }
@@ -133,7 +129,6 @@ public class CustomerModel {
     public String getCountry() {
         return country;
     }
-
 
     public void setCustomerId(Long id) {
         this.customerId = id;

@@ -1,12 +1,8 @@
 package com.example.demo.repository;
 
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
 /*
 import com.example.demo.model.CustomerModel;
-import com.example.demo.model.LeaseModel;
+import com.example.demo.model.LeaseContractModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

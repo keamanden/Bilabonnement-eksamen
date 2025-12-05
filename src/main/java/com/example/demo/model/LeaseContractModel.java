@@ -1,17 +1,12 @@
 package com.example.demo.model;
 
 import jakarta.persistence.*;
-
 import java.time.LocalDate;
 
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
 
 @Entity
  @Table(name = "leasecontract")
-public class LeaseModel {
+public class LeaseContractModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,10 +36,11 @@ public class LeaseModel {
     private String vinId;
 
 
-    public LeaseModel() {
+    public LeaseContractModel() {
     }
 
 
+    // getters and setters
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
     }

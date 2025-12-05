@@ -1,37 +1,51 @@
 package com.example.demo.service;
 
-
-
-import com.example.demo.model.CustomerModel;
-import com.example.demo.model.LeaseModel;
+import com.example.demo.model.LeaseContractModel;
 import com.example.demo.repository.*;
 import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.List;
 
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
-// TODO NEEDS CLEANUP
 
 @Service
-public class LeaseService {
+public class LeaseContractService {
 
     private final CustomerRepository customerRepository;
-    private final LeaseRepository leaseRepository;
+    private final LeaseContractRepository leaseContractRepository;
     private final VehicleService vehicleService;
+
     //private final CustomerJDBCRepository customerJDBCRepository;
     //private final VehicleJDBCRepository vehicleJDBCRepository;
     //private final LeaseJDBCRepository leaseJDBCRepository;
 
-    public LeaseService(CustomerRepository customerRepository, LeaseRepository leaseRepository, VehicleService vehicleService) {
+    public LeaseContractService(CustomerRepository customerRepository, LeaseContractRepository leaseContractRepository, VehicleService vehicleService) {
         this.customerRepository = customerRepository;
-        this.leaseRepository = leaseRepository;
+        this.leaseContractRepository = leaseContractRepository;
         this.vehicleService = vehicleService;
+
         //this.customerJDBCRepository = customerJDBCRepository;
         //this.vehicleJDBCRepository = vehicleJDBCRepository;
         //this.leaseJDBCRepository = leaseJDBCRepository;
     }
+
+    // Retrieves a list of leaseContracts that are currently active
+    public List<LeaseContractModel> getCurrentLeases() {
+        LocalDate today = LocalDate.now();
+        return leaseContractRepository.findByStartDateLessThanEqualAndEndDateGreaterThanEqual(today, today);
+    }
+
+    // Calculates the total price of all currently active lease contracts
+    public double getCurrentLeasesTotalPrice() {
+        return getCurrentLeases().stream()
+                .mapToDouble(LeaseContractModel::getTotalPrice)
+                .sum();
+    }
+
+    // Saves a new leaseContract into the database
+    public LeaseContractModel save(LeaseContractModel lease) {
+        return leaseContractRepository.save(lease);
+    }
+
 /*
     public void createAndSaveLease(LeaseRequest leaseRequest) {
 
@@ -42,12 +56,12 @@ public class LeaseService {
 
 
         //Data håndteres i leaserequest intil persistance
-        LeaseModel lease = leaseRequest.getLease();
+        LeaseContractModel lease = leaseRequest.getLease();
 
         lease.setCustomer(customer);
         lease.setVehicle(leaseRequest.getVehicle());
 
-        leaseRepository.save(lease);
+        leaseContractRepository.save(lease);
     }
 
 */
@@ -68,21 +82,5 @@ public class LeaseService {
         return leaseJDBCRepository.getTotalLeasePrice();
     }
 */
-    public List<LeaseModel> getCurrentLeases() {
-        LocalDate today = LocalDate.now();
-        return leaseRepository.findByStartDateLessThanEqualAndEndDateGreaterThanEqual(today, today);
-    }
-
-    public double getCurrentLeasesTotalPrice() {
-        return getCurrentLeases().stream()
-                .mapToDouble(LeaseModel::getTotalPrice)
-                .sum();
-    }
-
-    public LeaseModel save(LeaseModel lease) {
-        return leaseRepository.save(lease);
-    }
-
-
 
 }
