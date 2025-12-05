@@ -4,32 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc63d975-b925-4995-bd31-272d436960eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/Database.sql" afterDir="false" />
+    <list default="true" id="cc63d975-b925-4995-bd31-272d436960eb" name="Changes" comment="Tilføjet sql mappe under ressources til vores sql scripts (masterscript + individuelle tables)">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DTO/LeaseRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DTO/LeaseRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LeaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LeaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/VehicleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/VehicleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/CustomerModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/CustomerModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/LeaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/LeaseModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/CustomerJDBCRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/CustomerJDBCRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/LeaseJDBCRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/LeaseJDBCRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/VehicleJDBCRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/VehicleJDBCRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/VehicleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/VehicleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/service/LeaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/service/LeaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/service/VehicleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/service/VehicleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/DBscript.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/customer.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/Customer.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/damagereport.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/DamageReport.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/leasecontract.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/LeaseContract.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/vehicle.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/Vehicle.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pages/lease.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pages/lease.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/CreateLeaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/demo/CreateLeaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,17 +19,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
+        <option value="Class" />
         <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="test" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -58,14 +33,21 @@
     &quot;assignee&quot;: &quot;keamanden&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/keamanden/Bilabonnement-eksamen.git",
-    "accountId": "2eaa7f5d-16d9-46b5-a778-2ffbc472fc17"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/keamanden/Bilabonnement-eksamen&quot;,
+    &quot;accountId&quot;: &quot;929eb51e-df0c-44b3-94ab-c410adcf897d&quot;
   }
-}]]></component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.jdks/graalvm-jdk-21.0.8/lib/src.zip!/java.xml/com/sun/org/apache/xml/internal/utils/Constants.java" root0="SKIP_INSPECTION" />
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -77,15 +59,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Database Script.DBscript.sql.executor": "Run",
-    "Database Script.Database.sql.executor": "Run",
-    "Database Script.customer.sql.executor": "Run",
-    "Database Script.damagereport.sql.executor": "Run",
-    "Database Script.data.sql.executor": "Run",
-    "Database Script.employee.sql.executor": "Run",
-    "Database Script.leasecontract.sql.executor": "Run",
-    "Database Script.vehicle.sql.executor": "Run",
     "DefaultHtmlFileTemplate": "HTML File",
+    "Maven.demo [clean].executor": "Run",
+    "Maven.demo [install].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -96,88 +72,64 @@
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.DemoApplication.executor": "Run",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/1/DataGripProjects/Bilabonnement",
-    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "reference.settingsDialog.application.dockerConsole",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
-      "mysql",
-      "oracle"
-    ],
-    "RunConfigurationTargetLRU": [
-      "b6e81a36-578c-45aa-9150-f4d524a87dc3",
-      "25c3164b-47eb-4bf6-a459-c9f1fa5059bf"
+      "mysql"
     ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Java Projects\1 semester fresh\Small_programs_1\src\Bilabonnement-eksamen\src\main\resources" />
+      <recent name="C:\Users\1\IdeaProjects\Bilabonnement-eksamen\src\main\resources\templates\pages" />
+      <recent name="C:\Users\1\IdeaProjects\Bilabonnement-eksamen\src\main\resources\temp" />
+      <recent name="C:\Users\1\IdeaProjects\Bilabonnement-eksamen\src\main\resources\static\pages" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.DemoApplication">
-    <configuration name="Database.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/src/main/resources/sql/Database.sql" />
-      <script-mode>FILE</script-mode>
-      <data-source id="b6e81a36-578c-45aa-9150-f4d524a87dc3" />
-      <method v="2" />
-    </configuration>
-    <configuration name="damagereport.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/src/main/resources/sql/damagereport.sql" />
-      <script-mode>FILE</script-mode>
-      <data-source id="b6e81a36-578c-45aa-9150-f4d524a87dc3" />
-      <method v="2" />
-    </configuration>
-    <configuration name="data.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/src/main/resources/sql/data.sql" />
-      <script-mode>FILE</script-mode>
-      <data-source id="b6e81a36-578c-45aa-9150-f4d524a87dc3" />
-      <method v="2" />
-    </configuration>
-    <configuration name="leasecontract.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/src/main/resources/sql/leasecontract.sql" />
-      <script-mode>FILE</script-mode>
-      <data-source id="b6e81a36-578c-45aa-9150-f4d524a87dc3" />
-      <method v="2" />
-    </configuration>
-    <configuration name="vehicle.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/src/main/resources/sql/vehicle.sql" />
-      <script-mode>FILE</script-mode>
-      <data-source id="b6e81a36-578c-45aa-9150-f4d524a87dc3" />
-      <method v="2" />
-    </configuration>
-    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Database Script.Database.sql" />
-        <item itemvalue="Database Script.data.sql" />
-        <item itemvalue="Database Script.damagereport.sql" />
-        <item itemvalue="Database Script.leasecontract.sql" />
-        <item itemvalue="Database Script.vehicle.sql" />
+        <item itemvalue="Spring Boot.DemoApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
       </set>
     </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Physical" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\tobia\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -186,8 +138,62 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1763990295559</updated>
-      <workItem from="1764787536395" duration="31992000" />
+      <workItem from="1764253584158" duration="336000" />
+      <workItem from="1764253938965" duration="2613000" />
+      <workItem from="1764414247728" duration="12015000" />
+      <workItem from="1764435163101" duration="3707000" />
+      <workItem from="1764443828223" duration="1014000" />
+      <workItem from="1764504410180" duration="1140000" />
     </task>
+    <task id="LOCAL-00001" summary="Oprettet Customer controller model og repo samt lease controller model og repo. Nu skal det bare prøves af for at se om det virker. Til hvem end der gennemgår det her commit glhf.">
+      <option name="closed" value="true" />
+      <created>1764339031135</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764339031135</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fixed nogen date attributtes som lavede problemer">
+      <option name="closed" value="true" />
+      <created>1764339244159</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764339244159</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fixed nogen date attributtes som lavede problemer">
+      <option name="closed" value="true" />
+      <created>1764435264931</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764435264931</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Tilføjet thymeleaf i damagereport.html og tilføjet en JDBC connector .jar">
+      <option name="closed" value="true" />
+      <created>1764435367486</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1764435367486</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Tilføjet thymeleaf i damagereport.html og tilføjet en JDBC connector .jar">
+      <option name="closed" value="true" />
+      <created>1764435522750</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764435522750</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Tilføjet sql mappe under ressources til vores sql scripts (masterscript + individuelle tables)">
+      <option name="closed" value="true" />
+      <created>1764444560615</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764444560615</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,5 +214,25 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+    <MESSAGE value="Opsat Login således at der kan laves test på det" />
+    <MESSAGE value="Oprettet Customer controller model og repo samt lease controller model og repo. Nu skal det bare prøves af for at se om det virker. Til hvem end der gennemgår det her commit glhf." />
+    <MESSAGE value="Fixed nogen date attributtes som lavede problemer" />
+    <MESSAGE value="Tilføjet thymeleaf i damagereport.html og tilføjet en JDBC connector .jar" />
+    <MESSAGE value="Tilføjet sql mappe under ressources til vores sql scripts (masterscript + individuelle tables)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet sql mappe under ressources til vores sql scripts (masterscript + individuelle tables)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLSyntaxErrorException" package="java.sql" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

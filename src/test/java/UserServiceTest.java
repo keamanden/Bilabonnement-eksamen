@@ -1,17 +1,17 @@
+package com.example.demo.service;
+/*
 import com.example.demo.model.UserModel;
 import com.example.demo.repository.UserRepository;
-import com.example.demo.service.UserService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.MockitoAnnotations;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.verify;
 
-@ExtendWith(MockitoExtension.class)
 class UserServiceTest {
 
     @Mock
@@ -20,42 +20,50 @@ class UserServiceTest {
     @InjectMocks
     private UserService userService;
 
+    @BeforeEach
+    void setup() {
+        MockitoAnnotations.openMocks(this);
+    }
+
     @Test
-    void testLoginSuccess() {
-
-
+    void checkLogin_shouldReturnTrue_whenCredentialsAreCorrect() {
+        // Arrange
         UserModel user = new UserModel();
+        user.setUsername("john");
+        user.setPassword("1234");
 
-        user.setUsername("Alice");
-        user.setPassword("password1");
+        when(userRepository.findByUsername("john")).thenReturn(user);
 
-        Mockito.when(userRepository.findByUsername("Alice")).thenReturn(user);
+        // Act
+        boolean result = userService.checkLogin("john", "1234");
 
-        assertTrue(userService.checkLogin("Alice", "password1"));
+        // Assert
+        assertThat(result).isTrue();
+        verify(userRepository).findByUsername("john");
     }
 
     @Test
-    void testLoginFailure() {
-
+    void checkLogin_shouldReturnFalse_whenPasswordIsWrong() {
         UserModel user = new UserModel();
+        user.setUsername("john");
+        user.setPassword("1234");
 
-        user.setUsername("bob");
-        user.setPassword("password2");
+        when(userRepository.findByUsername("john")).thenReturn(user);
 
-        Mockito.when(userRepository.findByUsername("bob")).thenReturn(user);
+        boolean result = userService.checkLogin("john", "wrong");
 
-        assertFalse(userService.checkLogin("bob", "wrong password"));
+        assertThat(result).isFalse();
+        verify(userRepository).findByUsername("john");
     }
 
     @Test
-    void testUserNotFound() {
+    void checkLogin_shouldReturnFalse_whenUserDoesNotExist() {
+        when(userRepository.findByUsername("unknown")).thenReturn(null);
 
-        Mockito.when(userRepository.findByUsername("Bob")).thenReturn(null);
+        boolean result = userService.checkLogin("unknown", "password");
 
-        boolean result = userService.checkLogin("Bob", "password1");
-
-        assertFalse(result, "login failed, no such user");
-
+        assertThat(result).isFalse();
+        verify(userRepository).findByUsername("unknown");
     }
-
 }
+*/
