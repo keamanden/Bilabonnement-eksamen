@@ -21,7 +21,7 @@ body{
     max-width: 360px;
     width: auto;
     height: auto;
-    padding: 8px 40px 8px 10px;
+    padding: 8px 40px 8px 100px;
     flex: 0 0 auto;
     margin-right: 0;
 }

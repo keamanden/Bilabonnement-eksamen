@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="Fixed header navigation links and renamed text for the buttons to the same as the mockups for consistency">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="logo fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/Img/logo.img" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Globals/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Globals/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/header_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/header_style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +98,7 @@
       <workItem from="1764938709458" duration="7921000" />
       <workItem from="1764979891707" duration="46000" />
       <workItem from="1765280239330" duration="329000" />
-      <workItem from="1765280850960" duration="4618000" />
+      <workItem from="1765280850960" duration="6201000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml fix">
       <option name="closed" value="true" />
@@ -134,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764945881734</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="logo fix">
+      <option name="closed" value="true" />
+      <created>1765285891323</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1765285891323</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +150,8 @@
     <MESSAGE value="workspace.xml fix" />
     <MESSAGE value="small fixes/refactor etc" />
     <MESSAGE value="Fixed header navigation links and renamed text for the buttons to the same as the mockups for consistency" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed header navigation links and renamed text for the buttons to the same as the mockups for consistency" />
+    <MESSAGE value="logo fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="logo fix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
