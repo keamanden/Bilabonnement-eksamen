@@ -26,6 +26,13 @@ body{
     margin-right: 0;
 }
 
+.logo-img{
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
 
 
 .nav-links{
