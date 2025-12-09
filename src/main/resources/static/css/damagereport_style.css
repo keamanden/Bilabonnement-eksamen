@@ -7,22 +7,12 @@
 /* ============================================
    Global Body Styles
    ============================================ */
-/* Base body styling with dark background and grid pattern */
 body {
     margin: 0;
     padding: 0;
-    /* Dark gray background color matching mockup */
-    background-color: #2a2a2a;
-    /* Subtle grid pattern overlay using linear gradients */
-    background-image: 
-        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-    /* Grid cell size - creates 20x20px pattern */
-    background-size: 20px 20px;
-    color: white;
-    /* Modern system font stack for cross-platform consistency */
+    background-color: #f7f7f7;
+    color: #333;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    /* Ensure full viewport height */
     min-height: 100vh;
 }
 
@@ -127,7 +117,6 @@ body {
 /* ============================================
    Main Content Area
    ============================================ */
-/* Main page container with centered content and max width */
 .damage-report-page {
     max-width: 1400px;
     margin: 0 auto;
@@ -138,7 +127,7 @@ body {
 .page-title {
     font-size: 2em;
     margin-bottom: 30px;
-    color: white;
+    color: #222;
     font-weight: 500;
 }
 
@@ -152,11 +141,12 @@ body {
 /* ============================================
    Left Column - Damage Registration Form
    ============================================ */
-/* Left column container with semi-transparent background */
 .left-column {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: #ffffff;
     padding: 25px;
     border-radius: 8px;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 /* Form container with vertical flex layout */
@@ -175,7 +165,7 @@ body {
 
 /* Label styling for form fields */
 .form-group label {
-    color: white;
+    color: #333;
     font-size: 14px;
     font-weight: 500;
 }
@@ -185,9 +175,9 @@ body {
 .form-group input[type="number"],
 .form-group input[type="date"],
 .form-group textarea {
-    background-color: #4a4a4a;
-    border: 1px solid #666;
-    color: white;
+    background-color: #ffffff;
+    border: 1px solid #cfcfcf;
+    color: #333;
     padding: 12px;
     border-radius: 4px;
     font-size: 14px;
@@ -200,7 +190,8 @@ body {
 .form-group input[type="date"]:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: white;
+    border-color: #1892c3;
+    box-shadow: 0 0 0 2px rgba(24,146,195,0.15);
 }
 
 /* Textarea specific styling - allows vertical resizing */
@@ -221,9 +212,11 @@ body {
 
 /* Section for adding new damage items */
 .add-damage-section {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 /* Grid layout for damage input fields and add button */
@@ -245,16 +238,16 @@ body {
 
 /* Label styling for input groups */
 .input-group label {
-    color: white;
+    color: #333;
     font-size: 14px;
     font-weight: 500;
 }
 
 /* Input field styling in add damage section */
 .input-group input {
-    background-color: #4a4a4a;
-    border: 1px solid #666;
-    color: white;
+    background-color: #ffffff;
+    border: 1px solid #cfcfcf;
+    color: #333;
     padding: 12px;
     border-radius: 4px;
     font-size: 14px;
@@ -264,13 +257,14 @@ body {
 /* Focus state for input group inputs */
 .input-group input:focus {
     outline: none;
-    border-color: white;
+    border-color: #1892c3;
+    box-shadow: 0 0 0 2px rgba(24,146,195,0.15);
 }
 
 /* Button for adding a fault/damage to the list */
 .btn-add-fault {
-    background-color: #2a2a2a;
-    border: 1px solid white;
+    background-color: #1892c3;
+    border: none;
     color: white;
     padding: 12px 20px;
     border-radius: 4px;
@@ -286,7 +280,7 @@ body {
 
 /* Hover state for add fault button */
 .btn-add-fault:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #147aa3;
 }
 
 /* Arrow icon styling inside button */
@@ -296,21 +290,23 @@ body {
 
 /* Section containing the damage list table */
 .damage-list-section {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 /* Table styling for damage list */
 .damage-table {
     width: 100%;
     border-collapse: collapse;
-    color: white;
+    color: #333;
 }
 
 /* Table header styling with bottom border */
 .damage-table thead {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid #e2e2e2;
 }
 
 /* Table header cell styling */
@@ -319,13 +315,13 @@ body {
     padding: 12px;
     font-weight: 500;
     font-size: 14px;
-    color: white;
+    color: #444;
 }
 
 /* Table data cell styling */
 .damage-table td {
     padding: 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #f0f0f0;
     font-size: 14px;
 }
 
@@ -343,16 +339,16 @@ body {
 
 /* Label for total price field */
 .total-section label {
-    color: white;
+    color: #333;
     font-size: 14px;
     font-weight: 500;
 }
 
 /* Total price input field - read-only display */
 .total-section input {
-    background-color: #4a4a4a;
-    border: 1px solid #666;
-    color: white;
+    background-color: #ffffff;
+    border: 1px solid #cfcfcf;
+    color: #333;
     padding: 12px;
     border-radius: 4px;
     font-size: 14px;
@@ -364,8 +360,8 @@ body {
 
 /* Main submit button for registering damage report */
 .btn-register-damage {
-    background-color: #2a2a2a;
-    border: 2px solid white;
+    background-color: #1892c3;
+    border: none;
     color: white;
     padding: 15px 30px;
     border-radius: 4px;
@@ -382,7 +378,7 @@ body {
 
 /* Hover state - slight lift effect */
 .btn-register-damage:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #147aa3;
     transform: translateY(-1px);
 }
 
