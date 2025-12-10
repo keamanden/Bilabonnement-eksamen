@@ -49,7 +49,14 @@
                     <!-- Employee ID input field - identifies which employee is registering the damage -->
                     <div class="form-group">
                         <label for="employeeId">Medarbejder nr.</label>
-                        <input type="number" th:field="*{employeeId}" id="employeeId" required>
+                        <select th:field="*{employeeId}" id="employeeId" required>
+                            <option value="" disabled
+                                    th:selected="${damageReport.employeeId == null}">Vælg medarbejder</option>
+                            <option th:each="emp : ${employees}"
+                                    th:value="${emp.employeeId}"
+                                    th:text="${emp.employeeId + ' - ' + emp.name}">
+                            </option>
+                        </select>
                     </div>
 
                     <!-- Date picker for when the damage was discovered -->
