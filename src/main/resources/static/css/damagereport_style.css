@@ -170,10 +170,11 @@ body {
     font-weight: 500;
 }
 
-/* Input field styling - text, number, date, and textarea */
+/* Input field styling - text, number, date, select, and textarea */
 .form-group input[type="text"],
 .form-group input[type="number"],
 .form-group input[type="date"],
+.form-group select,
 .form-group textarea {
     background-color: #ffffff;
     border: 1px solid #cfcfcf;
@@ -188,6 +189,7 @@ body {
 .form-group input[type="text"]:focus,
 .form-group input[type="number"]:focus,
 .form-group input[type="date"]:focus,
+.form-group select:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: #1892c3;
