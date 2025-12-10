@@ -36,7 +36,14 @@
                     <!-- VIN number input field - Vehicle Identification Number -->
                     <div class="form-group">
                         <label for="vinId">Stelnummer</label>
-                        <input type="text" th:field="*{vinId}" id="vinId" required>
+                        <select th:field="*{vinId}" id="vinId" required>
+                            <option value="" disabled
+                                    th:selected="${#strings.isEmpty(damageReport.vinId)}">Vælg stelnummer</option>
+                            <option th:each="vehicle : ${vehicles}"
+                                    th:value="${vehicle.vinId}"
+                                    th:text="${vehicle.vinId + ' - ' + vehicle.brand + ' ' + vehicle.model}">
+                            </option>
+                        </select>
                     </div>
 
                     <!-- Employee ID input field - identifies which employee is registering the damage -->
