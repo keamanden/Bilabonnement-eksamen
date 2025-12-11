@@ -21,8 +21,8 @@ public class DamageReport {
     @Column(name = "repair_cost", nullable = false)
     private double repairCost;
 
-    @Column(name = "vin_id", nullable = false, length = 30)
-    private String vinId;
+    @Column(name = "vin", nullable = false, length = 30)
+    private String vin;
 
     @Column(name = "employee_id", nullable = false)
     private Long employeeId;
@@ -70,12 +70,12 @@ public class DamageReport {
         this.repairCost = repairCost;
     }
 
-    public String getVinId() {
-        return vinId;
+    public String getVin() {
+        return vin;
     }
 
-    public void setVinId(String vinId) {
-        this.vinId = vinId;
+    public void setVin(String vin) {
+        this.vin = vin;
     }
 
     public Long getEmployeeId() {

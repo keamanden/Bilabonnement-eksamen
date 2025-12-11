@@ -21,6 +21,13 @@
 
     <h2>Opret lejekontrakt</h2>
 
+    <!-- Simple server-sided error message for missing input -->
+    <div th:if="${errorMessage}"
+         style="margin: 10px auto; max-width: 1000px; padding: 10px; border: 1px solid red; background: #ffe6e6;">
+        <p th:text="${errorMessage}"></p>
+    </div>
+
+
     <!-- FORM 1: This part gets data for customer and vehicle and reloads the page to add them to the form -->
     <form th:action="@{/leaseContract}" method="get" style="max-width: 1000px; margin: 0 auto 20px;">
         <div style="display: flex; gap: 20px;">

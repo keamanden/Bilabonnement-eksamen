@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="fixed logo left padding">
+    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="fixed database for vehicle and changed primary to registration_NO and alternate key/ unique for vin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LeaseContractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LeaseContractController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/DamageReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/DamageReport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/LeaseContractModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/LeaseContractModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/DamageReportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/DamageReportRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/DamageReport.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/DamageReport.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/LeaseContract.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/LeaseContract.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/Vehicle.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/Vehicle.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pages/damagereport.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pages/damagereport.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pages/leaseContract.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pages/leaseContract.html" afterDir="false" />
     </list>
@@ -21,6 +19,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,34 +57,84 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.DemoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.LeaseContractExceptionFlowTest.executor": "Run",
+    "JUnit.LeaseContractHappyFlowTest.executor": "Run",
+    "JUnit.LeaseExceptionFlowTest.executor": "Run",
+    "JUnit.LeaseHappyFlowTest.executor": "Run",
+    "JUnit.LeaseModelTest.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.DemoApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Java Projects\1 semester fresh\Small_programs_1\src\Bilabonnement-eksamen\src\main\resources\static" />
       <recent name="F:\Java Projects\1 semester fresh\Small_programs_1\src\Bilabonnement-eksamen\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.DemoApplication">
+    <configuration name="LeaseContractExceptionFlowTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.LeaseContractExceptionFlowTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LeaseContractHappyFlowTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.LeaseContractHappyFlowTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LeaseModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.LeaseModelTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="demo" />
@@ -88,6 +143,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.LeaseContractExceptionFlowTest" />
+        <item itemvalue="JUnit.LeaseContractHappyFlowTest" />
+        <item itemvalue="JUnit.LeaseModelTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -109,7 +171,8 @@
       <workItem from="1765280239330" duration="329000" />
       <workItem from="1765280850960" duration="9623000" />
       <workItem from="1765353998226" duration="5835000" />
-      <workItem from="1765414882461" duration="5794000" />
+      <workItem from="1765414882461" duration="16995000" />
+      <workItem from="1765476614489" duration="9927000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml fix">
       <option name="closed" value="true" />
@@ -159,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765287649060</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixed database for vehicle and changed primary to registration_NO and alternate key/ unique for vin">
+      <option name="closed" value="true" />
+      <created>1765422948354</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1765422948354</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +242,8 @@
     <MESSAGE value="Fixed header navigation links and renamed text for the buttons to the same as the mockups for consistency" />
     <MESSAGE value="logo fix" />
     <MESSAGE value="fixed logo left padding" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed logo left padding" />
+    <MESSAGE value="fixed database for vehicle and changed primary to registration_NO and alternate key/ unique for vin" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed database for vehicle and changed primary to registration_NO and alternate key/ unique for vin" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

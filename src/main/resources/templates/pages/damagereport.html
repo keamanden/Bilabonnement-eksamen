@@ -36,9 +36,9 @@
                     <!-- VIN number input field - Vehicle Identification Number -->
                     <div class="form-group">
                         <label for="vinId">Stelnummer</label>
-                        <select th:field="*{vinId}" id="vinId" required>
+                        <select th:field="*{vin}" id="vinId" required>
                             <option value="" disabled
-                                    th:selected="${#strings.isEmpty(damageReport.vinId)}">Vælg stelnummer</option>
+                                    th:selected="${#strings.isEmpty(damageReport.vin)}">Vælg stelnummer</option>
                             <option th:each="vehicle : ${vehicles}"
                                     th:value="${vehicle.vin}"
                                     th:text="${vehicle.vin + ' - ' + vehicle.brand + ' ' + vehicle.model}">

@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface DamageReportRepository extends JpaRepository<DamageReport, Long> {
     
-    List<DamageReport> findByVinId(String vinId);
+    List<DamageReport> findByVin(String vin);
     
     List<DamageReport> findByLeaseId(Long leaseId);
 }

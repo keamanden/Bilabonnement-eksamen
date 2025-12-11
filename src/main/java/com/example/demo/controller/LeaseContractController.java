@@ -58,7 +58,7 @@ public class LeaseContractController {
                 ? vehicleRepository.findById(registrationNo).orElse(null)
                 : null;
 
-        // This puts all data to the model and returns the view input data for thymeleaf
+        // This puts all data to the model and returns the view input data for Thymeleaf
         model.addAttribute("customers", customers);
         model.addAttribute("vehicles", vehicles);
         model.addAttribute("leaseForm", leaseForm);
@@ -70,8 +70,37 @@ public class LeaseContractController {
 
     // Method that handles "opret lejekontrakt" submit
     @PostMapping("/leaseContract")
-    public String createLease(@ModelAttribute("leaseForm") LeaseContractModel leaseForm) {
+    public String createLease(@ModelAttribute("leaseForm") LeaseContractModel leaseForm, Model model) {
 
+        // Simple server-sided validation check required fields
+        // Also used for the unit test named LeaseContractExceptionFlowTest
+        boolean missingRequired =
+                leaseForm.getCustomerId() == null ||
+                        leaseForm.getRegistrationNo() == null ||
+                        leaseForm.getStartDate() == null ||
+                        leaseForm.getEndDate() == null ||
+                        leaseForm.getKmStart() == 0 ||
+                        leaseForm.getTotalPrice() == 0.0;
+
+        // if one or more inputs fields are missing then missingRequired = true then this if statement runs otherwise skip
+        if (missingRequired) {
+            // puts error message in model
+            model.addAttribute("errorMessage", "Påkrævede felter mangler");
+
+            // Loads all customers and vehicles sorted for dropdown menu
+            var customers = customerRepository.findAll(Sort.by("firstName"));
+            var vehicles = vehicleRepository.findAll(Sort.by("vin"));
+
+            // This puts all data to the model and returns the view input data for Thymeleaf
+            model.addAttribute("customers", customers);
+            model.addAttribute("vehicles", vehicles);
+            model.addAttribute("leaseForm", leaseForm);
+
+            // stay on the same page
+            return "pages/leaseContract";
+        }
+
+        // Saves the lease contract if all inputs is filled
         // Find the full customer and vehicle entity using the IDs from the form
         CustomerModel customer = customerRepository.findById(leaseForm.getCustomerId())
                 .orElseThrow(() -> new IllegalArgumentException("Customer not found"));

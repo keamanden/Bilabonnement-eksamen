@@ -5,7 +5,7 @@ import java.time.LocalDate;
 
 
 @Entity
- @Table(name = "leasecontract")
+ @Table(name = "Leasecontract")
 public class LeaseContractModel {
 
     @Id

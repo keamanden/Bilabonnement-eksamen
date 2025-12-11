@@ -44,11 +44,11 @@ VALUES ('AB12345', 'VIN0001', 'Toyota', 'Yaris', 2020),
 -- add hardcoded data for leasecontract and damagereport here
 
 /*
- INSERT INTO leasecontract (start_date, end_date, total_price, customer_id, vin_id, km_start
+ INSERT INTO leasecontract (start_date, end_date, total_price, customer_id, vin, km_start
  ) VALUES
 */
 
 /*
- INSERT INTO damagereport (damage_date, description, repair_cost, vin_id, employee_id, lease_id, km_slut
+ INSERT INTO damagereport (damage_date, description, repair_cost, vin, employee_id, lease_id, km_slut
  ) VALUES
  */
