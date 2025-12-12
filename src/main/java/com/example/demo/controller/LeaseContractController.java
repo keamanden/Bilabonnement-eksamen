@@ -41,8 +41,8 @@ public class LeaseContractController {
             Model model) {
 
         // Loads all customers and vehicles sorted for dropdown menu
-        var customers = customerRepository.findAll(Sort.by("firstName"));
-        var vehicles = vehicleRepository.findAll(Sort.by("vin"));
+        var customers = customerRepository.findAllOrderedByFirstName();
+        var vehicles  = vehicleRepository.findAllOrderedByVin();
 
         // This makes the leaseform data as an object for the thymeleaf form
         LeaseContractModel leaseForm = new LeaseContractModel();
@@ -51,12 +51,13 @@ public class LeaseContractController {
 
         // This finds the customer and vehicle data in the database
         CustomerModel selectedCustomer = (customerId != null)
-                ? customerRepository.findById(customerId).orElse(null)
+                ? customerRepository.findById(customerId)
                 : null;
 
         Vehicle selectedVehicle = (registrationNo != null)
-                ? vehicleRepository.findById(registrationNo).orElse(null)
+                ? vehicleRepository.findByRegistrationNo(registrationNo).orElse(null)
                 : null;
+
 
         // This puts all data to the model and returns the view input data for Thymeleaf
         model.addAttribute("customers", customers);
@@ -88,8 +89,8 @@ public class LeaseContractController {
             model.addAttribute("errorMessage", "Påkrævede felter mangler");
 
             // Loads all customers and vehicles sorted for dropdown menu
-            var customers = customerRepository.findAll(Sort.by("firstName"));
-            var vehicles = vehicleRepository.findAll(Sort.by("vin"));
+            var customers = customerRepository.findAllOrderedByFirstName();
+            var vehicles  = vehicleRepository.findAllOrderedByVin();
 
             // This puts all data to the model and returns the view input data for Thymeleaf
             model.addAttribute("customers", customers);
@@ -102,11 +103,15 @@ public class LeaseContractController {
 
         // Saves the lease contract if all inputs is filled
         // Find the full customer and vehicle entity using the IDs from the form
-        CustomerModel customer = customerRepository.findById(leaseForm.getCustomerId())
-                .orElseThrow(() -> new IllegalArgumentException("Customer not found"));
+        CustomerModel customer = customerRepository.findById(leaseForm.getCustomerId());
+        if (customer == null) {
+            throw new IllegalArgumentException("Customer not found");
+        }
 
-        Vehicle vehicle = vehicleRepository.findById(leaseForm.getRegistrationNo())
+        Vehicle vehicle = vehicleRepository
+                .findByRegistrationNo(leaseForm.getRegistrationNo())
                 .orElseThrow(() -> new IllegalArgumentException("Vehicle not found"));
+
 
         // Attaches customer and vehicle data to the lease entity
         leaseForm.setCustomer(customer);

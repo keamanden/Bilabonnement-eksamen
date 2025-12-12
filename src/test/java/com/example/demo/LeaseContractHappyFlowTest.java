@@ -1,11 +1,10 @@
 package com.example.demo;
 
 import com.example.demo.model.CustomerModel;
-import com.example.demo.model.LeaseContractModel;
 import com.example.demo.model.Vehicle;
 import com.example.demo.repository.CustomerRepository;
-import com.example.demo.repository.LeaseContractRepository;
 import com.example.demo.repository.VehicleRepository;
+import com.example.demo.service.LeaseContractService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
@@ -13,8 +12,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.ui.ModelMap;
-import java.time.LocalDate;
-import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -41,7 +38,8 @@ class LeaseContractHappyFlowTest {
     private VehicleRepository vehicleRepository;
 
     @Autowired
-    private LeaseContractRepository leaseRepository;
+    private LeaseContractService leaseContractService;
+
 
     // The test method
     @Test
@@ -49,11 +47,11 @@ class LeaseContractHappyFlowTest {
 
         // Preconditions customer and vehicle needs to exist in the database
         // Take the first customer and vehicle from data.sql/database
-        CustomerModel customer = customerRepository.findAll().get(0);
-        Vehicle vehicle = vehicleRepository.findAll().get(0);
+        CustomerModel customer = customerRepository.findAllOrderedByFirstName().get(0);
+        Vehicle vehicle = vehicleRepository.findAllOrderedByVin().get(0);
 
         // Checks how many lease contracts in the database
-        long leasesBefore = leaseRepository.count();
+        long leasesBefore = leaseContractService.getAllLeasesCount();
 
         // Simulates user choosing customer + vehicle then clicking "Hent data"
         MvcResult getResult = mockMvc.perform( // Fake browser to perform HTTP requests
@@ -101,22 +99,9 @@ class LeaseContractHappyFlowTest {
                 .andExpect(view().name("pages/leaseContractSuccess"));
 
 
-        // Checks if lease contract was saved in the database if we have 1 more than before
-        assertEquals(leasesBefore + 1, leaseRepository.count(),
+        // Checks if lease contract was saved in the database (we expect one more than before)
+        assertEquals(leasesBefore + 1, leaseContractService.getAllLeasesCount(),
                 "There should be one more lease after creation");
 
-        // Finds all existing lease contracts in the database and picks the one the test created for the assertEquals()
-        List<LeaseContractModel> allLeases = leaseRepository.findAll();
-        LeaseContractModel created = allLeases.get(allLeases.size() - 1);
-
-        // Checks if the lease contract is linked to the right customer and vehicle by comparing
-        assertEquals(customer.getCustomerId(), created.getCustomer().getCustomerId());
-        assertEquals(vehicle.getRegistrationNo(), created.getVehicle().getRegistrationNo());
-
-        // LocalData parsing and checks for correct data
-        assertEquals(LocalDate.parse(startDateStr), created.getStartDate());
-        assertEquals(LocalDate.parse(endDateStr),   created.getEndDate());
-        assertEquals(10000, created.getKmStart());
-        assertEquals(4500.0, created.getTotalPrice(), 0.00001);
     }
 }

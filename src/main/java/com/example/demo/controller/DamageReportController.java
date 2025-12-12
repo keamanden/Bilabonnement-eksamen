@@ -32,7 +32,7 @@ public class DamageReportController {
     public String showDamageReportForm(Model model) {
         DamageReport damageReport = new DamageReport();
         model.addAttribute("damageReport", damageReport);
-        model.addAttribute("vehicles", vehicleRepository.findAll());
+        model.addAttribute("vehicles", vehicleRepository.findAllOrderedByVin());
         model.addAttribute("employees", employeeRepository.findAll());
         return "pages/damagereport";
     }

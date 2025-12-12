@@ -1,6 +1,11 @@
 package com.example.demo.model;
 import jakarta.persistence.*;
 
+/**
+JPA NOTE:
+@Entity / @Table / @Column etc. are left here only as documentation.
+We no longer use JPA; all persistence is done via JDBC (Jdbc*Repository).
+ */
 
 @Entity
 @Table(name = "user_model")

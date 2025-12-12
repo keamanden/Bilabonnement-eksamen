@@ -31,7 +31,7 @@ public class LeaseContractService {
     // Retrieves a list of leaseContracts that are currently active
     public List<LeaseContractModel> getCurrentLeases() {
         LocalDate today = LocalDate.now();
-        return leaseContractRepository.findByStartDateLessThanEqualAndEndDateGreaterThanEqual(today, today);
+        return leaseContractRepository.findCurrentLeases(today);
     }
 
     // Calculates the total price of all leases in the database
@@ -41,7 +41,7 @@ public class LeaseContractService {
 
     // Counts all leases in the database
     public long getAllLeasesCount() {
-        return leaseContractRepository.count();
+        return leaseContractRepository.countAllLeases();
     }
 
     // Calculates the total price of all currently active lease contracts
@@ -52,8 +52,8 @@ public class LeaseContractService {
     }
 
     // Saves a new leaseContract into the database
-    public LeaseContractModel save(LeaseContractModel lease) {
-        return leaseContractRepository.save(lease);
+    public void save(LeaseContractModel lease) {
+        leaseContractRepository.save(lease);
     }
 
 /*

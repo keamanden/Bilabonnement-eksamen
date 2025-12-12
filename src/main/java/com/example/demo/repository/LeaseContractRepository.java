@@ -1,17 +1,20 @@
 package com.example.demo.repository;
 
 import com.example.demo.model.LeaseContractModel;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
+
 import java.time.LocalDate;
 import java.util.List;
 
+public interface LeaseContractRepository {
 
+    void save(LeaseContractModel lease);
 
-public interface LeaseContractRepository extends JpaRepository<LeaseContractModel, Long> {
+    // JOIN query: Lease + Customer + Vehicle
+    List<LeaseContractModel> findCurrentLeases(LocalDate date);
 
-    List<LeaseContractModel> findByStartDateLessThanEqualAndEndDateGreaterThanEqual(LocalDate startDate, LocalDate endDate);
-
-    @Query("select coalesce(sum(l.totalPrice), 0) from LeaseContractModel l")
+    // SUM of all total_price
     double sumAllTotalPrices();
+
+    // COUNT of all leases
+    long countAllLeases();
 }

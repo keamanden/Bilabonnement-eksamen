@@ -1,6 +1,13 @@
 package com.example.demo.repository;
 
 import com.example.demo.model.CustomerModel;
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
 
-public interface CustomerRepository extends JpaRepository<CustomerModel, Long> { }
+public interface CustomerRepository {
+
+    // For dropdown in leaseContract page
+    List<CustomerModel> findAllOrderedByFirstName();
+
+    // For loading a specific customer in controller
+    CustomerModel findById(Long id);
+}

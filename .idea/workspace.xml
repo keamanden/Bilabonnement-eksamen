@@ -4,16 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="fixed database for vehicle and changed primary to registration_NO and alternate key/ unique for vin">
+    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="Created 2 unit tests one for happy flow and one for exception flow + small fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/DamageReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/DamageReportController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LeaseContractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LeaseContractController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/CustomerModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/CustomerModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/DamageReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/DamageReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/LeaseContractModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/LeaseContractModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/UserModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/CustomerRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/DamageReportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/DamageReportRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pages/damagereport.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pages/damagereport.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pages/leaseContract.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pages/leaseContract.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/LeaseContractRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/LeaseContractRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/VehicleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/VehicleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/service/LeaseContractService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/service/LeaseContractService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/LeaseContractExceptionFlowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/demo/LeaseContractExceptionFlowTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/LeaseContractHappyFlowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/demo/LeaseContractHappyFlowTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +36,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -73,7 +86,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.DemoApplication.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "haidet-testV2",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -172,7 +185,7 @@
       <workItem from="1765280850960" duration="9623000" />
       <workItem from="1765353998226" duration="5835000" />
       <workItem from="1765414882461" duration="16995000" />
-      <workItem from="1765476614489" duration="9927000" />
+      <workItem from="1765476614489" duration="23032000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml fix">
       <option name="closed" value="true" />
@@ -230,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765422948354</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Created 2 unit tests one for happy flow and one for exception flow + small fixes">
+      <option name="closed" value="true" />
+      <created>1765491072328</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1765491072328</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +264,8 @@
     <MESSAGE value="logo fix" />
     <MESSAGE value="fixed logo left padding" />
     <MESSAGE value="fixed database for vehicle and changed primary to registration_NO and alternate key/ unique for vin" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed database for vehicle and changed primary to registration_NO and alternate key/ unique for vin" />
+    <MESSAGE value="Created 2 unit tests one for happy flow and one for exception flow + small fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created 2 unit tests one for happy flow and one for exception flow + small fixes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

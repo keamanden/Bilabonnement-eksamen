@@ -35,7 +35,7 @@ class LeaseContractExceptionFlowTest {
     void createLease_withMissingRequiredFields_showsErrorAndDoesNotSave() throws Exception {
 
         // Checks how many lease contracts exist in database and stores count in leasesBefore
-        long leasesBefore = LeaseContractRepository.count();
+        long leasesBefore = LeaseContractRepository.countAllLeases();
 
         /* simulate clicking "Opret lejekontrakt" with empty fields */
 
@@ -54,7 +54,7 @@ class LeaseContractExceptionFlowTest {
                 .andReturn();
 
         // Checks if a new lease contract was saved
-        long leasesAfter = LeaseContractRepository.count();
+        long leasesAfter = LeaseContractRepository.countAllLeases();
         assertEquals(leasesBefore, leasesAfter, // Expect leasesBefore == leasesAfter or else it fails
                 "No new lease should be saved when required fields are missing");
 
