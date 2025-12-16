@@ -33,15 +33,15 @@
                     Uses Thymeleaf object binding to map form fields to damageReport model
                 -->
                 <form id="damage-form" th:action="@{/damage/save}" th:object="${damageReport}" method="post" class="damage-form">
-                    <!-- VIN number input field - Vehicle Identification Number -->
+                    <!-- Vehicle selector (stored as registration_no in DamageReport) -->
                     <div class="form-group">
-                        <label for="vinId">Stelnummer</label>
-                        <select th:field="*{vin}" id="vinId" required>
+                        <label for="registrationNo">Registreringsnummer (viser også VIN)</label>
+                        <select th:field="*{registrationNo}" id="registrationNo" required>
                             <option value="" disabled
-                                    th:selected="${#strings.isEmpty(damageReport.vin)}">Vælg stelnummer</option>
+                                    th:selected="${#strings.isEmpty(damageReport.registrationNo)}">Vælg bil</option>
                             <option th:each="vehicle : ${vehicles}"
-                                    th:value="${vehicle.vin}"
-                                    th:text="${vehicle.vin + ' - ' + vehicle.brand + ' ' + vehicle.model}">
+                                    th:value="${vehicle.registrationNo}"
+                                    th:text="${vehicle.registrationNo + ' (VIN: ' + vehicle.vin + ') - ' + vehicle.brand + ' ' + vehicle.model}">
                             </option>
                         </select>
                     </div>
@@ -73,11 +73,11 @@
                     
                     <!-- Hidden fields for backend processing - not visible to user -->
                     <!-- Lease ID: Links damage report to a specific lease contract -->
-                    <input type="hidden" th:field="*{leaseId}" id="leaseId" value="1">
+                    <input type="hidden" th:field="*{leaseId}" id="leaseId" th:value="1">
                     <!-- End mileage: Final kilometers when damage was reported -->
-                    <input type="hidden" th:field="*{kmSlut}" id="kmSlut" value="0">
+                    <input type="hidden" th:field="*{kmSlut}" id="kmSlut" th:value="0">
                     <!-- Repair cost: Automatically calculated from damage list, updated via JavaScript -->
-                    <input type="hidden" th:field="*{repairCost}" id="repair_cost" value="0.00">
+                    <input type="hidden" th:field="*{repairCost}" id="repair_cost" th:value="0.00">
                 </form>
             </div>
 

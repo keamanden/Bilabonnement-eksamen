@@ -23,7 +23,7 @@ public class JdbcDamageReportRepository implements DamageReportRepository {
         d.setDamageDate(rs.getDate("damage_date").toLocalDate());
         d.setDescription(rs.getString("description"));
         d.setRepairCost(rs.getDouble("repair_cost"));
-        d.setVin(rs.getString("vin"));
+        d.setRegistrationNo(rs.getString("registration_no"));
         d.setEmployeeId(rs.getLong("employee_id"));
         d.setLeaseId(rs.getLong("lease_id"));
         d.setKmSlut(rs.getInt("km_slut"));
@@ -36,14 +36,14 @@ public class JdbcDamageReportRepository implements DamageReportRepository {
             // INSERT
             String sql = """
                 INSERT INTO DamageReport
-                (damage_date, description, repair_cost, vin, employee_id, lease_id, km_slut)
+                (damage_date, description, repair_cost, registration_no, employee_id, lease_id, km_slut)
                 VALUES (?, ?, ?, ?, ?, ?, ?)
             """;
             jdbcTemplate.update(sql,
                     report.getDamageDate(),
                     report.getDescription(),
                     report.getRepairCost(),
-                    report.getVin(),
+                    report.getRegistrationNo(),
                     report.getEmployeeId(),
                     report.getLeaseId(),
                     report.getKmSlut()
@@ -52,7 +52,7 @@ public class JdbcDamageReportRepository implements DamageReportRepository {
             // UPDATE
             String sql = """
                 UPDATE DamageReport
-                SET damage_date = ?, description = ?, repair_cost = ?, vin = ?,
+                SET damage_date = ?, description = ?, repair_cost = ?, registration_no = ?,
                     employee_id = ?, lease_id = ?, km_slut = ?
                 WHERE damage_id = ?
             """;
@@ -60,7 +60,7 @@ public class JdbcDamageReportRepository implements DamageReportRepository {
                     report.getDamageDate(),
                     report.getDescription(),
                     report.getRepairCost(),
-                    report.getVin(),
+                    report.getRegistrationNo(),
                     report.getEmployeeId(),
                     report.getLeaseId(),
                     report.getKmSlut(),
@@ -76,9 +76,9 @@ public class JdbcDamageReportRepository implements DamageReportRepository {
     }
 
     @Override
-    public List<DamageReport> findByVin(String vin) {
-        String sql = "SELECT * FROM DamageReport WHERE vin = ?";
-        return jdbcTemplate.query(sql, this::mapRow, vin);
+    public List<DamageReport> findByRegistrationNo(String registrationNo) {
+        String sql = "SELECT * FROM DamageReport WHERE registration_no = ?";
+        return jdbcTemplate.query(sql, this::mapRow, registrationNo);
     }
 
     @Override

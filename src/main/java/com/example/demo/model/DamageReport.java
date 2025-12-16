@@ -28,8 +28,8 @@ public class DamageReport {
     @Column(name = "repair_cost", nullable = false)
     private double repairCost;
 
-    @Column(name = "vin", nullable = false, length = 30)
-    private String vin;
+    @Column(name = "registration_no", nullable = false, length = 30)
+    private String registrationNo;
 
     @Column(name = "employee_id", nullable = false)
     private Long employeeId;
@@ -77,12 +77,12 @@ public class DamageReport {
         this.repairCost = repairCost;
     }
 
-    public String getVin() {
-        return vin;
+    public String getRegistrationNo() {
+        return registrationNo;
     }
 
-    public void setVin(String vin) {
-        this.vin = vin;
+    public void setRegistrationNo(String registrationNo) {
+        this.registrationNo = registrationNo;
     }
 
     public Long getEmployeeId() {

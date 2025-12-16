@@ -10,7 +10,7 @@ public interface DamageReportRepository {
 
     List<DamageReport> findAll();
 
-    List<DamageReport> findByVin(String vin);
+    List<DamageReport> findByRegistrationNo(String registrationNo);
 
     List<DamageReport> findByLeaseId(Long leaseId);
 }
