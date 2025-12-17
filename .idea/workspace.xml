@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="tilføjet / til controller" />
+    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="sat service til at return true så man kan bruge hvad end til at logge ind" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,7 +203,7 @@
       <workItem from="1765816650349" duration="1416000" />
       <workItem from="1765820889897" duration="8905000" />
       <workItem from="1765891324823" duration="4180000" />
-      <workItem from="1765965743936" duration="10807000" />
+      <workItem from="1765965743936" duration="11231000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml fix">
       <option name="closed" value="true" />
@@ -397,7 +397,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765978553969</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="sat service til at return true så man kan bruge hvad end til at logge ind">
+      <option name="closed" value="true" />
+      <created>1765978978882</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1765978978882</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,7 +434,8 @@
     <MESSAGE value="redirected login" />
     <MESSAGE value="redirected login ændret til pages" />
     <MESSAGE value="tilføjet / til controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="tilføjet / til controller" />
+    <MESSAGE value="sat service til at return true så man kan bruge hvad end til at logge ind" />
+    <option name="LAST_COMMIT_MESSAGE" value="sat service til at return true så man kan bruge hvad end til at logge ind" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
