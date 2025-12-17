@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="fixed så test bliver kørt mod db">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="redirected login" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -205,7 +203,7 @@
       <workItem from="1765816650349" duration="1416000" />
       <workItem from="1765820889897" duration="8905000" />
       <workItem from="1765891324823" duration="4180000" />
-      <workItem from="1765965743936" duration="9694000" />
+      <workItem from="1765965743936" duration="10021000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml fix">
       <option name="closed" value="true" />
@@ -375,7 +373,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765972921269</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="redirected login">
+      <option name="closed" value="true" />
+      <created>1765977845883</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1765977845884</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +407,8 @@
     <MESSAGE value="added test properties" />
     <MESSAGE value="removed init never from application test" />
     <MESSAGE value="fixed så test bliver kørt mod db" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed så test bliver kørt mod db" />
+    <MESSAGE value="redirected login" />
+    <option name="LAST_COMMIT_MESSAGE" value="redirected login" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
