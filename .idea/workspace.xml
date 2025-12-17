@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="tilføjet h2 dependency" />
+    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="init sat til always">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,6 +139,11 @@
       </method>
     </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="DB_PASSWORD" value="Keamanden123" />
+        <env name="DB_URL" value="jdbc:mysql://bilabonnomentdb.mysql.database.azure.com:3306/bilabbonnementdb?useSSL=true&amp;requireSSL=true&amp;serverTimezone=UTC" />
+        <env name="DB_USER" value="adminLogin" />
+      </envs>
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
@@ -144,6 +151,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.LeaseContractExceptionFlowTest" />
+      <item itemvalue="JUnit.LeaseContractHappyFlowTest" />
+      <item itemvalue="JUnit.LeaseModelTest" />
+      <item itemvalue="Spring Boot.DemoApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LeaseModelTest" />
@@ -183,7 +196,7 @@
       <workItem from="1765816650349" duration="1416000" />
       <workItem from="1765820889897" duration="8905000" />
       <workItem from="1765891324823" duration="4180000" />
-      <workItem from="1765965743936" duration="3633000" />
+      <workItem from="1765965743936" duration="4343000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml fix">
       <option name="closed" value="true" />
@@ -313,7 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765969338330</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="init sat til always">
+      <option name="closed" value="true" />
+      <created>1765969682752</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1765969682752</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +355,8 @@
     <MESSAGE value="reverted" />
     <MESSAGE value="gjordt så testen bruger test application properties" />
     <MESSAGE value="tilføjet h2 dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="tilføjet h2 dependency" />
+    <MESSAGE value="init sat til always" />
+    <option name="LAST_COMMIT_MESSAGE" value="init sat til always" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
