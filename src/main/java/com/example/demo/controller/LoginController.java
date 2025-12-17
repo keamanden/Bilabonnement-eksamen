@@ -12,7 +12,7 @@ public class LoginController {
         this.userService = userService;
     }
 
-    @GetMapping("")
+    @GetMapping("/")
     public String login() {
         return "pages/login";
     }
