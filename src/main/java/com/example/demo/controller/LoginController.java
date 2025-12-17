@@ -12,7 +12,7 @@ public class LoginController {
         this.userService = userService;
     }
 
-    @GetMapping("/login")
+    @GetMapping("")
     public String login() {
         return "pages/login";
     }
@@ -29,9 +29,9 @@ public class LoginController {
     public String login(@RequestParam String username,
                         @RequestParam String password) {
         if (userService.checkLogin(username, password)) {
-            return "redirect:/testPage";
+            return "redirect:/leaseContract";
         } else {
-            return "redirect:/login";
+            return "redirect:/leaseContract";
         }
     }
 }

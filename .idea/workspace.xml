@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="removed init never from application test">
+    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="fixed så test bliver kørt mod db">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/LeaseContractHappyFlowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/demo/LeaseContractHappyFlowTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application-test.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +205,7 @@
       <workItem from="1765816650349" duration="1416000" />
       <workItem from="1765820889897" duration="8905000" />
       <workItem from="1765891324823" duration="4180000" />
-      <workItem from="1765965743936" duration="6857000" />
+      <workItem from="1765965743936" duration="9694000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml fix">
       <option name="closed" value="true" />
@@ -369,7 +367,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765971017237</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="fixed så test bliver kørt mod db">
+      <option name="closed" value="true" />
+      <created>1765972921269</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1765972921269</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,7 +400,8 @@
     <MESSAGE value="init ændret i application test" />
     <MESSAGE value="added test properties" />
     <MESSAGE value="removed init never from application test" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed init never from application test" />
+    <MESSAGE value="fixed så test bliver kørt mod db" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed så test bliver kørt mod db" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
