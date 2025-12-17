@@ -29,9 +29,9 @@ public class LoginController {
     public String login(@RequestParam String username,
                         @RequestParam String password) {
         if (userService.checkLogin(username, password)) {
-            return "pages/leaseContract";
+            return "redirect:/leaseContract";
         } else {
-            return "pages/leaseContract";
+            return "redirect:/leaseContract";
         }
     }
 }

@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="sat service til at return true så man kan bruge hvad end til at logge ind" />
+    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="ændret userservice til at return true på error">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,7 +205,7 @@
       <workItem from="1765816650349" duration="1416000" />
       <workItem from="1765820889897" duration="8905000" />
       <workItem from="1765891324823" duration="4180000" />
-      <workItem from="1765965743936" duration="11231000" />
+      <workItem from="1765965743936" duration="12056000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml fix">
       <option name="closed" value="true" />
@@ -405,7 +407,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765978978882</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="ændret userservice til at return true på error">
+      <option name="closed" value="true" />
+      <created>1765979442353</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1765979442353</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,7 +445,8 @@
     <MESSAGE value="redirected login ændret til pages" />
     <MESSAGE value="tilføjet / til controller" />
     <MESSAGE value="sat service til at return true så man kan bruge hvad end til at logge ind" />
-    <option name="LAST_COMMIT_MESSAGE" value="sat service til at return true så man kan bruge hvad end til at logge ind" />
+    <MESSAGE value="ændret userservice til at return true på error" />
+    <option name="LAST_COMMIT_MESSAGE" value="ændret userservice til at return true på error" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
