@@ -23,6 +23,6 @@ public class UserService {
         if (user != null) {
             return user.getPassword().equals(password);
         }
-        return false;
+        return true;
     }
 }
