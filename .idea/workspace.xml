@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="added test properties">
+    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="removed init never from application test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/LeaseContractHappyFlowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/demo/LeaseContractHappyFlowTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application-test.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +65,7 @@
     "JUnit.LeaseModelTest.executor": "Run",
     "Maven.demo [clean].executor": "Run",
     "Maven.demo [install].executor": "Run",
+    "Maven.demo [test].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -92,7 +95,7 @@
       <recent name="F:\Java Projects\1 semester fresh\Small_programs_1\src\Bilabonnement-eksamen\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.DemoApplication">
+  <component name="RunManager" selected="JUnit.LeaseContractExceptionFlowTest">
     <configuration name="LeaseContractExceptionFlowTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
@@ -103,7 +106,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.demo" />
       <option name="MAIN_CLASS_NAME" value="com.example.demo.LeaseContractExceptionFlowTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <envs>
+        <env name="DB_URL" value="bilabonnomentdb.mysql.database.azure.com" />
+        <env name="DB_USER" value="adminLogin" />
+        <env name="DB_PASSWORD" value="Keamanden123" />
+      </envs>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,6 +127,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.demo" />
       <option name="MAIN_CLASS_NAME" value="com.example.demo.LeaseContractHappyFlowTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,6 +143,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.demo" />
       <option name="MAIN_CLASS_NAME" value="com.example.demo.LeaseModelTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -141,7 +152,7 @@
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <envs>
         <env name="DB_PASSWORD" value="Keamanden123" />
-        <env name="DB_URL" value="jdbc:mysql://bilabonnomentdb.mysql.database.azure.com:3306/bilabbonnementdb?useSSL=true&amp;requireSSL=true&amp;serverTimezone=UTC" />
+        <env name="DB_URL" value="bilabonnomentdb.mysql.database.azure.com" />
         <env name="DB_USER" value="adminLogin" />
       </envs>
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -196,7 +207,7 @@
       <workItem from="1765816650349" duration="1416000" />
       <workItem from="1765820889897" duration="8905000" />
       <workItem from="1765891324823" duration="4180000" />
-      <workItem from="1765965743936" duration="4998000" />
+      <workItem from="1765965743936" duration="6857000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml fix">
       <option name="closed" value="true" />
@@ -350,7 +361,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765970606070</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="removed init never from application test">
+      <option name="closed" value="true" />
+      <created>1765971017237</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1765971017237</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,7 +393,8 @@
     <MESSAGE value="init sat til always" />
     <MESSAGE value="init ændret i application test" />
     <MESSAGE value="added test properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="added test properties" />
+    <MESSAGE value="removed init never from application test" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed init never from application test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

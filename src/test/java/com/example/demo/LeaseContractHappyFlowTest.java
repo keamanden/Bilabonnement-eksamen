@@ -43,9 +43,13 @@ class LeaseContractHappyFlowTest {
     private LeaseContractService leaseContractService;
 
 
+
+
     // The test method
     @Test
     void createLeaseContract_fullHappyFlow() throws Exception {
+
+
 
         // Preconditions customer and vehicle needs to exist in the database
         // Take the first customer and vehicle from data.sql/database
