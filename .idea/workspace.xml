@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="init sat til always">
+    <list default="true" id="d823522d-51cc-4e50-b2a6-5b14f920f18c" name="Changes" comment="added test properties">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -196,7 +196,7 @@
       <workItem from="1765816650349" duration="1416000" />
       <workItem from="1765820889897" duration="8905000" />
       <workItem from="1765891324823" duration="4180000" />
-      <workItem from="1765965743936" duration="4343000" />
+      <workItem from="1765965743936" duration="4998000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml fix">
       <option name="closed" value="true" />
@@ -334,7 +334,23 @@
       <option name="project" value="LOCAL" />
       <updated>1765969682752</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="init ændret i application test">
+      <option name="closed" value="true" />
+      <created>1765970432662</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1765970432662</updated>
+    </task>
+    <task id="LOCAL-00019" summary="added test properties">
+      <option name="closed" value="true" />
+      <created>1765970606070</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1765970606070</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +372,9 @@
     <MESSAGE value="gjordt så testen bruger test application properties" />
     <MESSAGE value="tilføjet h2 dependency" />
     <MESSAGE value="init sat til always" />
-    <option name="LAST_COMMIT_MESSAGE" value="init sat til always" />
+    <MESSAGE value="init ændret i application test" />
+    <MESSAGE value="added test properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="added test properties" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
