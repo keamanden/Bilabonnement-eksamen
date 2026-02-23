@@ -56,41 +56,4 @@ public class LeaseContractService {
         leaseContractRepository.save(lease);
     }
 
-/*
-    public void createAndSaveLease(LeaseRequest leaseRequest) {
-
-        CustomerModel customer = customerRepository.save(leaseRequest.getCustomer());
-
-        leaseRequest.setVehicle(vehicleService.getVehicleByRegistrationNo(leaseRequest.getVehicle().getRegistrationNo()).
-                orElseThrow(() -> new IllegalArgumentException("Vehicle not found")));
-
-
-        //Data håndteres i leaserequest intil persistance
-        LeaseContractModel lease = leaseRequest.getLease();
-
-        lease.setCustomer(customer);
-        lease.setVehicle(leaseRequest.getVehicle());
-
-        leaseContractRepository.save(lease);
-    }
-
-*/
-/*
-    public void createAndSaveLeaseJDBC(LeaseRequest leaseRequest) {
-
-        Long customerId = customerJDBCRepository.saveCustomerAndReturnPK(leaseRequest);
-
-        Long vehicleId = vehicleJDBCRepository.findVehicleIdByRegistration(leaseRequest.getVehicle().getRegistrationNo());
-
-        try {
-            leaseJDBCRepository.saveLeaseJDBC(leaseRequest, customerId, vehicleId);
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    public double getTotalLeasePrice() {
-        return leaseJDBCRepository.getTotalLeasePrice();
-    }
-*/
-
 }

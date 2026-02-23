@@ -124,29 +124,4 @@ public class LeaseContractController {
         return "pages/leaseContractSuccess";
     }
 
-
-/*
-//     Create lease håndteres igennem leaseRequst da formen indeholder både data for lease og customer
-//     som håndteres samtidig var det nødvendigt at lave en DTO for at undgå concurrency problemer.
-
-    @PostMapping
-    public String createLeaseAndAddToDB(@ModelAttribute LeaseRequest leaseRequest, Model model) {
-
-        try {
-            leaseService.createAndSaveLease(leaseRequest);
-            model.addAttribute("success", true);
-            model.addAttribute("leaseRequest", new LeaseRequest());
-        }catch (IllegalArgumentException e){
-            model.addAttribute("errorMessage", e.getMessage());
-            model.addAttribute("success", false);
-           Hvis der indtastet forkert reg nr. slettes alt data i formen ikke
-            model.addAttribute("leaseRequest", leaseRequest);
-        } catch (Exception e) {
-            model.addAttribute("success", false);
-            model.addAttribute("errorMessage", "unexpected error");
-        }
-        return "pages/lease";
-    }
-*/
-
 }
